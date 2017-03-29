@@ -1,0 +1,62 @@
+.bg {
+	background: url(./../beachview.jpg);
+	background-repeat: no-repeat;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+     /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+    
+}
+
+.blog-divs {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.centerdiv{
+  margin: 0 auto;
+}
+
+.header {
+	justify-content: flex-start;
+  top: 198px;
+  margin:  0 auto;
+	vertical-align: middle;
+	background: ;
+  text-align:center;
+}
+header h1{
+  text-align:center;
+}
+
+.list-items {
+	position:absolute;
+    height: 51px;
+    left: 365px;
+    top: 198px;margin: auto;
+	vertical-align: middle;
+}
+
+.z-index {
+  z-index: 5;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}

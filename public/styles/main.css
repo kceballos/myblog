@@ -1,36 +1,41 @@
 /* CURRENTLY IN: styles/main.css */
 html {
-	font-size: 12px;
+    font-size: 12px;
+    background-color: lightblue;
 }
 
 #todoapp .todo-col {
-	/*border: 1px solid black;*/
-	text-align: center;
+    /*border: 1px solid black;*/
+    text-align: center;
 }
 
 #todoapp .todo-spinner {
-	animation: spinner 2.0s linear infinite;
+    animation: spinner 2.0s linear infinite;
 }
 
 #todoapp .todolist-item {
-	font-weight: bold;
-	text-align: left;
+    font-weight: bold;
+    text-align: left;
 }
 
 #todoapp .todolist-icon {
-	float: right;
-	margin: 0 0.25rem;
+    float: right;
+    margin: 0 0.25rem;
 }
 
 #todoapp .todo-addbtn {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 @keyframes spinner {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+$('.ui.labeled.icon.sidebar')
+  .sidebar('toggle')
+;

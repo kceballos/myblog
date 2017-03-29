@@ -78,6 +78,9 @@
 ${todoItem.data.todo}
 			`;
 
+			if(location.pathname != "/blog.html" ) {
+
+
 			li.innerHTML += `<span class="glyphicon glyphicon-remove todolist-icon js-todo-remove"></span>`;
 
 			if (todoItem.data.isDone) {
@@ -86,11 +89,13 @@ ${todoItem.data.todo}
 			else {
 				li.innerHTML += `<span class="glyphicon glyphicon-unchecked todolist-icon js-todo-check"></span>`
 			}
-
+		}
 
 			li.classList.add('list-group-item', 'todolist-item');
 
 			container.appendChild(li);
+			if (location.pathname != "/blog.html"){
+
 			li.querySelector('.js-todo-remove').addEventListener('click', (e) => {
 				const {id} = todoItem;
 
@@ -121,6 +126,7 @@ ${todoItem.data.todo}
 			})
 			
 		}
+	}
 
 		if (todoItems.length === 0) {
 			container.innerHTML = `
@@ -136,7 +142,7 @@ No todoitems!
 		.then((todoItems) => {
 			render(todoItems);
 		});
-
+		if (location.pathname != "/blog.html"){
 	document.querySelector('.js-add-todo').addEventListener('click', (e) => {
 		const input = document.querySelector('.js-todo-text');
 		input.setAttribute('disabled', 'disabled');
@@ -150,5 +156,5 @@ No todoitems!
 			render(data);
 		});
 	})
-
+}
 })();
